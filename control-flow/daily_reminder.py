@@ -41,3 +41,9 @@ match priority:
 		reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
 	case _:
 		reminder = f"Note: '{task}' has an unspecified priority."
+
+# Modify reminder if task is time-bound
+if time_bound == "yes":
+	reminder = reminder.replace(" task", " task that requires immediate attention today!")
+	
+print(reminder)
