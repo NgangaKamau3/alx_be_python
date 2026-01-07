@@ -1,4 +1,4 @@
-def shopping_list_manager():
+def display_menu():
     """A simple interface for managing a shopping list.
        Users can add items, remove items and view the current list of items. 
        The script shouls start with an empty shopping list and provide a menu-driven interface for user interaction.
