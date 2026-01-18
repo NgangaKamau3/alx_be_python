@@ -31,24 +31,21 @@ def convert_to_fahrenheit(celsius):
     return fahrenheit
 
 #Wrapping it all together in a main function and providing user interaction
+# Example usage:
+# Enter the temperature to convert: 0
+# Is this temperature in Celsius or Fahrenheit? (C/F): C
+# 0.0°C is 32.0°F
 def main():
-    print("Temperature Conversion Tool")
-    print("1. Convert Fahrenheit to Celsius")
-    print("2. Convert Celsius to Fahrenheit")
-    
-    choice = input("Choose an option (1 or 2): ")
-    
-    if choice == '1':
-        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
-        celsius = convert_to_celsius(fahrenheit)
-        print(f"{fahrenheit}°F is equal to {celsius:.2f}°C")
-        
-    elif choice == '2':
-        celsius = float(input("Enter temperature in Celsius: "))
-        fahrenheit = convert_to_fahrenheit(celsius)
-        print(f"{celsius}°C is equal to {fahrenheit:.2f}°F")
-        
+    temp_input = float(input("Enter the temperature to convert: "))
+    scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+    if scale == 'C':
+        converted_temp = convert_to_fahrenheit(temp_input)
+        print(f"{temp_input}°C is {converted_temp}°F")
+    elif scale == 'F':
+        converted_temp = convert_to_celsius(temp_input)
+        print(f"{temp_input}°F is {converted_temp}°C")
     else:
-        print("Invalid temperature. Please enter a numeric value.")
+        print("Invalid input. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+
 if __name__ == "__main__":
     main()
