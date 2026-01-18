@@ -1,8 +1,8 @@
 # Define functions to convert temperatures between Celsius and Fahrenheit
 # Define global variables for the conversion factors
 
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 #Conversion from Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
